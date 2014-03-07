@@ -34,3 +34,6 @@ update-rc.d sensu-server defaults
 update-rc.d sensu-api defaults
 update-rc.d sensu-client defaults
 update-rc.d sensu-dashboard defaults
+
+## copy SSL created for RabbitMQ
+cp /etc/rabbitmq/ssl/client_key.pem /etc/rabbitmq/ssl/client_cert.pem  /etc/sensu/ssl/
