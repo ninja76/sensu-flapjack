@@ -19,7 +19,7 @@ cp server_key.pem /etc/rabbitmq/ssl/
 cp server_cert.pem /etc/rabbitmq/ssl/
 cp testca/cacert.pem /etc/rabbitmq/ssl/
 
-cp /tmp/sensu-install/rabbitmq.config /etc/rabbitmq/
+cp /tmp/sensu/rabbitmq.config /etc/rabbitmq/
 
 rabbitmq-plugins enable rabbitmq_management
 
