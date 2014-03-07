@@ -19,6 +19,21 @@ cp server_key.pem /etc/rabbitmq/ssl/
 cp server_cert.pem /etc/rabbitmq/ssl/
 cp testca/cacert.pem /etc/rabbitmq/ssl/
 
+cp /tmp/sensu-install/rabbitmq.config /etc/rabbitmq/
+
+rabbitmq-plugins enable rabbitmq_management
+
+update-rc.d rabbitmq-server defaults
+/etc/init.d/rabbitmq-server start
+
+# Create Vhost and user for Sensu
+rabbitmqctl add_vhost /sensu
+rabbitmqctl add_user sensu mypass
+rabbitmqctl set_permissions -p /sensu sensu ".*" ".*" ".*"
+
+##
+## End RabbitMQ Install
+
 ## install Redis
 apt-get -y install redis-server
 /etc/init.d/redis-server start
@@ -37,4 +52,4 @@ update-rc.d sensu-dashboard defaults
 
 ## copy SSL created for RabbitMQ
 mkdir /etc/sensu/ssl
-cp /etc/rabbitmq/ssl/client_key.pem /etc/rabbitmq/ssl/client_cert.pem  /etc/sensu/ssl/
+cp /tmp/sensu/joemiller.me-intro-to-sensu/client_key.pem /tmp/sensu/joemiller.me-intro-to-sensu/client_cert.pem  /etc/sensu/ssl/
