@@ -20,7 +20,7 @@ cp server_cert.pem /etc/rabbitmq/ssl/
 cp testca/cacert.pem /etc/rabbitmq/ssl/
 
 ## install Redis
-apt-get install redis-server
+apt-get -y install redis-server
 /etc/init.d/redis-server start
 
 ## Install Sensu
