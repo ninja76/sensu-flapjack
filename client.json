@@ -1,8 +1,7 @@
-#Basic Sensu client.json
-    {
-      "client": {
-        "name": "sensu-server",
-        "address": "127.0.0.1",
-        "subscriptions": [ "test" ]
-      }
-    }
+{
+  "client": {
+    "name": "sensu-server",
+    "address": "127.0.0.1",
+    "subscriptions": [ "webservers","test" ]
+  }
+}
