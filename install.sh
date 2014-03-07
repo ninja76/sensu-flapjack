@@ -46,6 +46,7 @@ apt-get -y install sensu
 
 rm -f /etc/sensu/config.json.example
 cp /tmp/sensu/config.json /etc/sensu
+cp /tmp/sensu/client.json /etc/sensu/conf.d
 
 ## Set Sensu to run on startup
 update-rc.d sensu-server defaults
