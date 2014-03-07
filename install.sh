@@ -20,7 +20,7 @@ cp server_cert.pem /etc/rabbitmq/ssl/
 cp testca/cacert.pem /etc/rabbitmq/ssl/
 
 cp /tmp/sensu/rabbitmq.config /etc/rabbitmq/
-
+sleep 2
 rabbitmq-plugins enable rabbitmq_management
 
 update-rc.d rabbitmq-server defaults
