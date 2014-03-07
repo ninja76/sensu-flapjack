@@ -44,6 +44,9 @@ echo "deb     http://repos.sensuapp.org/apt sensu main" >/etc/apt/sources.list.d
 apt-get update
 apt-get -y install sensu
 
+rm -f /etc/sensu/config.json.example
+cp /tmp/sensu-install/config.json /etc/sensu.json
+
 ## Set Sensu to run on startup
 update-rc.d sensu-server defaults
 update-rc.d sensu-api defaults
@@ -53,3 +56,9 @@ update-rc.d sensu-dashboard defaults
 ## copy SSL created for RabbitMQ
 mkdir /etc/sensu/ssl
 cp /tmp/sensu/joemiller.me-intro-to-sensu/client_key.pem /tmp/sensu/joemiller.me-intro-to-sensu/client_cert.pem  /etc/sensu/ssl/
+
+##Start Sensu
+sudo /etc/init.d/sensu-server start
+sudo /etc/init.d/sensu-api start
+sudo /etc/init.d/sensu-client start    
+sudo /etc/init.d/sensu-dashboard start    
