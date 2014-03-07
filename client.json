@@ -1,0 +1,8 @@
+#Basic Sensu client.json
+    {
+      "client": {
+        "name": "sensu-server.foo.bar",
+        "address": "10.10.10.1",
+        "subscriptions": [ "test" ]
+      }
+    }
