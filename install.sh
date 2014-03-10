@@ -62,6 +62,12 @@ cp /tmp/sensu/joemiller.me-intro-to-sensu/client_key.pem /tmp/sensu/joemiller.me
 cp /tmp/sensu/plugins/* /etc/sensu/plugins
 chmod +x /etc/sensu/plugins
 
+##Install and Enable Flapjack
+deb http://packages.flapjack.io/deb precise main
+cat << EOF > /etc/apt/sources.list.d/flapjack.list
+apt-get update
+apt-get install flapjack
+cp /tmp/sensu/flapjack.json /etc/sensu/conf.d
 ##Start Sensu
 sudo /etc/init.d/sensu-server start
 sudo /etc/init.d/sensu-api start
