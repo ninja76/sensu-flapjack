@@ -1,4 +1,3 @@
-sensu-install
+sensu-flapjack-install
 =============
-
-Scripts for installing Sensu on Ubuntu
+Script for installing Sensu and Flapjack on Ubuntu

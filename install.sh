@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# Installs and configures Sensu and Flapjack on Ubuntu.  Tested with Ubuntu 13.04
+# Use at your own risk!
+#
 ## Install RabbitMQ
 apt-get -y install erlang-nox
 echo "deb http://www.rabbitmq.com/debian/ testing main" >/etc/apt/sources.list.d/rabbitmq.list
