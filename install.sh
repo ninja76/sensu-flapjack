@@ -69,8 +69,8 @@ chmod +x /etc/sensu/plugins
 ##Install and Enable Flapjack
 deb http://packages.flapjack.io/deb precise main
 cat << EOF > /etc/apt/sources.list.d/flapjack.list
-apt-get update
-apt-get install flapjack
+apt-get -y update
+apt-get -y install flapjack
 cp /tmp/sensu/flapjack.json /etc/sensu/conf.d
 ##Start Sensu
 sudo /etc/init.d/sensu-server start
