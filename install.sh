@@ -58,6 +58,10 @@ update-rc.d sensu-dashboard defaults
 mkdir /etc/sensu/ssl
 cp /tmp/sensu/joemiller.me-intro-to-sensu/client_key.pem /tmp/sensu/joemiller.me-intro-to-sensu/client_cert.pem  /etc/sensu/ssl/
 
+##Copy plugins
+cp /tmp/sensu/plugins/* /etc/sensu/plugins
+chmod +x /etc/sensu/plugins
+
 ##Start Sensu
 sudo /etc/init.d/sensu-server start
 sudo /etc/init.d/sensu-api start
