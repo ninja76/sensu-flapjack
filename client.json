@@ -2,6 +2,6 @@
   "client": {
     "name": "<hostname>",
     "address": "<address>",
-    "subscriptions": [ "webservers","test" ]
+    "subscriptions": [ "webservers","production" ]
   }
 }
