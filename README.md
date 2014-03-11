@@ -1,3 +1,4 @@
 sensu-flapjack-install
 =============
-Script for installing Sensu and Flapjack on Ubuntu
+This is a set of scripts to make the installation and configuration of Sensu and Flapjack more better.
+After being a devoute Nagios user for the better part of 15 years I can see the shortcomings of Nagios in the "Cloud" Age and the need for something more modern.
