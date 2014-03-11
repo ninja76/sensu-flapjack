@@ -11,7 +11,7 @@ cp /tmp/sensu/plugins /etc/sensu/plugins
 
 # Config client.json
 sed -i -e "s/<hostname>/`hostname`/g" /etc/sensu/conf.d/client.json
-ip=`ip addr show eth0 | grep -Eo '([0-9]*\.){3}[0-9]*' | tail -n 1`;sed -e "s/<address>/$ip/" /etc/sensu/conf.d/client.json
+ip=`ip addr show eth0 | grep -Eo '([0-9]*\.){3}[0-9]*' | tail -n 1`; sed -e "s/<address>/$ip/" /etc/sensu/conf.d/client.json
 
 ## Set Sensu to run on startup
 update-rc.d sensu-client defaults
