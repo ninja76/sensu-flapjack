@@ -1,10 +1,7 @@
 {
   "client": {
-    "name": "prod-sf-01",
-    "address": "162.243.130.187",
-    "subscriptions": [
-      "production",
-      "webservers"
-    ]
+    "name": "<hostname>",
+    "address": "<address>",
+    "subscriptions": [ "webservers","production" ]
   }
 }
