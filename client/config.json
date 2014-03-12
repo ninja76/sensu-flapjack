@@ -5,7 +5,7 @@
       "cert_chain_file": "/etc/sensu/ssl/client_cert.pem"
     },
     "port": 5671,
-    "host": "monitor",
+    "host": "sensu-server",
     "user": "sensu",
     "password": "mypass",
     "vhost": "/sensu"
