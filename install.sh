@@ -72,6 +72,7 @@ cp /tmp/flapjack.list /etc/apt/sources.list.d/flapjack.list
 apt-get -y update
 apt-get -y --force-yes install flapjack
 cp /tmp/sensu/flapjack.json /etc/sensu/conf.d
+cp /tmp/sensu/flapjack.rb /etc/sensu/extensions/handlers
 ##Start Sensu
 sudo /etc/init.d/sensu-server start
 sudo /etc/init.d/sensu-api start
