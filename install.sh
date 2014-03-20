@@ -73,6 +73,12 @@ apt-get -y update
 apt-get -y --force-yes install flapjack
 cp /tmp/sensu/flapjack.json /etc/sensu/conf.d
 cp /tmp/sensu/flapjack.rb /etc/sensu/extensions/handlers
+
+## Install the flapjack-diner and API consumer
+git clone git://github.com/flpjck/flapjack-diner.git /tmp/flapjack-diner
+cd /tmp/flapjack-diner
+bundle
+
 ##Start Sensu
 sudo /etc/init.d/sensu-server start
 sudo /etc/init.d/sensu-api start
