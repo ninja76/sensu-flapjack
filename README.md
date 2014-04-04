@@ -10,7 +10,7 @@ After being a devote Nagios user for the better part of 15 years I can see the s
 sh install.sh
 
 ####Client
-sh install-client.sh
+sh install.client.sh
 
 Done!
 
