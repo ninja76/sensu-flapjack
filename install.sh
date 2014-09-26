@@ -66,6 +66,15 @@ cp /tmp/sensu/joemiller.me-intro-to-sensu/client_key.pem /tmp/sensu/joemiller.me
 cp /tmp/sensu/plugins/* /etc/sensu/plugins
 chmod +x /etc/sensu/plugins
 
+##Install Uchiwa (Sensu Dashboard)
+apt-get -y install npm node
+git clone https://github.com/sensu/uchiwa.git /tmp/uchiwa
+cd /tmp/uchiwa
+npm install -g bower
+npm install --production --unsafe-perm
+cp /tmp/sensu/config.json.uchiwa config.json
+
+npm install -g bower
 ##Install and Enable Flapjack
 #Precise
 #echo 'deb http://packages.flapjack.io/deb precise main' > /tmp/flapjack.list
