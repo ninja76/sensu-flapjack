@@ -70,7 +70,7 @@ chmod +x /etc/sensu/plugins
 #Precise
 #echo 'deb http://packages.flapjack.io/deb precise main' > /tmp/flapjack.list
 #Trusty
-'echo "deb http://packages.flapjack.io/deb/v1 trusty main' > /tmp/flapjack.list
+echo 'deb http://packages.flapjack.io/deb/v1 trusty main' > /tmp/flapjack.list
 cp /tmp/flapjack.list /etc/apt/sources.list.d/flapjack.list
 apt-get -y update
 apt-get -y --force-yes install flapjack
