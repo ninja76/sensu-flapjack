@@ -73,7 +73,7 @@ ln -s /usr/bin/nodejs /usr/sbin/node
 git clone https://github.com/sensu/uchiwa.git /opt/uchiwa
 cd /opt/uchiwa
 npm install -g bower
-npm install --production --unsafe-perm
+npm install --production --allow-root install
 npm install -g forever
 cp /tmp/sensu/config.json.uchiwa config.json
 forever start app.js
