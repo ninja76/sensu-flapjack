@@ -78,6 +78,7 @@ cp /tmp/sensu/flapjack.json /etc/sensu/conf.d
 cp /tmp/sensu/flapjack.rb /etc/sensu/extensions/handlers
 
 ## Install the flapjack-diner and API consumer
+apt-get -y install bundler
 git clone git://github.com/flpjck/flapjack-diner.git /tmp/flapjack-diner
 cd /tmp/flapjack-diner
 bundle
