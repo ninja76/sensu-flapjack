@@ -68,12 +68,15 @@ chmod +x /etc/sensu/plugins
 
 ### Uchiwa Install  aka Sensu Dashboard ###
 apt-get -y install npm node
-git clone https://github.com/sensu/uchiwa.git /tmp/uchiwa
-cd /tmp/uchiwa
+rm -f /usr/sbin/node
+ln -s /usr/bin/nodejs /usr/sbin/node
+git clone https://github.com/sensu/uchiwa.git /opt/uchiwa
+cd /opt/uchiwa
 npm install -g bower
 npm install --production --unsafe-perm
+npm install -g forever
 cp /tmp/sensu/config.json.uchiwa config.json
-
+forever start app.js
 ##Install and Enable Flapjack
 #Precise
 #echo 'deb http://packages.flapjack.io/deb precise main' > /tmp/flapjack.list
