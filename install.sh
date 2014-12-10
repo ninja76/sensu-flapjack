@@ -67,16 +67,15 @@ cp /tmp/sensu/plugins/* /etc/sensu/plugins
 chmod +x /etc/sensu/plugins
 
 ### Uchiwa Install  aka Sensu Dashboard ###
-apt-get -y install npm node
-rm -f /usr/sbin/node
-ln -s /usr/bin/nodejs /usr/sbin/node
+apt-get -y install npm node gccgo
 git clone https://github.com/sensu/uchiwa.git /opt/uchiwa
 cd /opt/uchiwa
 npm install -g bower
 npm install --production --allow-root install
-npm install -g forever
 cp /tmp/sensu/config.json.uchiwa config.json
-forever start app.js
+# Uchiwa moved to the Go framework instead of Sinatra :(
+#TODO: AUtomate Go install
+# Coming Soon
 ##Install and Enable Flapjack
 #Precise
 #echo 'deb http://packages.flapjack.io/deb precise main' > /tmp/flapjack.list
