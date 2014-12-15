@@ -63,6 +63,7 @@ mkdir /etc/sensu/ssl
 cp /tmp/sensu/joemiller.me-intro-to-sensu/client_key.pem /tmp/sensu/joemiller.me-intro-to-sensu/client_cert.pem  /etc/sensu/ssl/
 
 ##Copy plugins
+git clone https://github.com/sensu/sensu-community-plugins.git /tmp/sensu-plugins
 cp /tmp/sensu/plugins/* /etc/sensu/plugins
 chmod +x /etc/sensu/plugins
 
