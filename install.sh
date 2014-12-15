@@ -67,11 +67,7 @@ cp /tmp/sensu/plugins/* /etc/sensu/plugins
 chmod +x /etc/sensu/plugins
 
 ### Uchiwa Install  aka Sensu Dashboard ###
-apt-get -y install npm node gccgo
-git clone https://github.com/sensu/uchiwa.git /opt/uchiwa
-cd /opt/uchiwa
-npm install -g bower
-npm install --production --allow-root install
+apt-get -y install npm node uchiwa
 cp /tmp/sensu/config.json.uchiwa config.json
 # Uchiwa moved to the Go framework instead of Sinatra :(
 #TODO: AUtomate Go install
