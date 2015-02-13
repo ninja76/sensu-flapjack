@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Installs and configures Sensu and Flapjack on Ubuntu.  Tested with Ubuntu 13.04
+# Installs and configures Sensu and Flapjack on Ubuntu.  Tested with Ubuntu 14.04
 # Use at your own risk!
 #
 ## Install RabbitMQ
